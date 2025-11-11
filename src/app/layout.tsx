@@ -2,6 +2,7 @@ import "~/styles/globals.css";
 
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import Link from "next/link";
 import { ConvexProvider } from "./ConvexProvider";
 
 export const metadata: Metadata = {
@@ -14,13 +15,21 @@ const geist = Geist({
 	variable: "--font-geist-sans",
 });
 
+const buildDate = new Date().toLocaleDateString();
+
 export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html className={`${geist.variable}`} lang="en">
-			<body>
+			<body className="flex min-h-screen flex-col">
 				<ConvexProvider>{children}</ConvexProvider>
+				<footer className="mt-auto py-4 text-center text-gray-500 text-sm">
+					<Link href="https://madebydev.com" target="_blank">
+						madebydev.com
+					</Link>{" "}
+					- {buildDate}
+				</footer>
 			</body>
 		</html>
 	);
