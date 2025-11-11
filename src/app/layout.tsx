@@ -27,10 +27,12 @@ export default function RootLayout({
           <ConvexProvider>{children}</ConvexProvider>
         </div>
         <footer className="flex h-14 items-center justify-center text-center text-gray-500 text-xs">
-          <Link href="https://madebydev.com" target="_blank">
-            madebydev.com
-          </Link>{" "}
-          - Version {buildDate}
+          <span>
+            <Link href="https://madebydev.com" target="_blank">
+              madebydev.com
+            </Link>{" "}
+            - Version {buildDate}
+          </span>
         </footer>
       </body>
     </html>
