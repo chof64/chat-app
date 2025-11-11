@@ -1,0 +1,25 @@
+{
+	"editor.defaultFormatter": "biomejs.biome",
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+	"emmet.showExpandedAbbreviation": "never",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.biome": "explicit",
+		"source.organizeImports.biome": "explicit"
+	},
+	"[prisma]": {
+		"editor.defaultFormatter": "Prisma.prisma"
+	},
+	"chat.mcp.serverSampling": {
+		"campusconnect/.vscode/mcp.json: convex-mcp": {
+			"allowedModels": ["copilot/gpt-5-mini", "copilot/grok-code-fast-1"]
+		},
+		"campusconnect/.vscode/mcp.json: shadcn": {
+			"allowedModels": ["copilot/gpt-5-mini", "copilot/grok-code-fast-1"]
+		},
+		"campusconnect/.vscode/mcp.json: next-devtools": {
+			"allowedModels": ["copilot/gpt-5-mini", "copilot/grok-code-fast-1"]
+		}
+	}
+}
