@@ -15,7 +15,7 @@ const geist = Geist({
   variable: "--font-geist-sans",
 });
 
-const buildDate = new Date().toLocaleDateString();
+const buildDate = new Date().toISOString().substring(0, 10).replace(/-/g, ".");
 
 export default function RootLayout({
   children,
@@ -24,11 +24,11 @@ export default function RootLayout({
     <html className={`${geist.variable}`} lang="en">
       <body className="flex min-h-screen flex-col">
         <ConvexProvider>{children}</ConvexProvider>
-        <footer className="mt-auto py-4 text-center text-gray-500 text-sm">
+        <footer className="mt-auto py-4 text-center text-gray-500 text-xs">
           <Link href="https://madebydev.com" target="_blank">
             madebydev.com
           </Link>{" "}
-          - {buildDate}
+          - Version {buildDate}
         </footer>
       </body>
     </html>
