@@ -18,7 +18,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
+    <main className="flex min-h-[calc(100vh-3.5rem)] flex-col items-center justify-center p-24">
       <div className="w-full max-w-md">
         <input
           className="mb-4 w-full rounded border p-2"

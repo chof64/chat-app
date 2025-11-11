@@ -23,8 +23,10 @@ export default function RootLayout({
   return (
     <html className={`${geist.variable}`} lang="en">
       <body className="flex min-h-screen flex-col">
-        <ConvexProvider>{children}</ConvexProvider>
-        <footer className="mt-auto py-4 text-center text-gray-500 text-xs">
+        <div className="flex-1">
+          <ConvexProvider>{children}</ConvexProvider>
+        </div>
+        <footer className="flex h-14 items-center justify-center text-center text-gray-500 text-xs">
           <Link href="https://madebydev.com" target="_blank">
             madebydev.com
           </Link>{" "}
