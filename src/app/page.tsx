@@ -18,8 +18,8 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-[calc(100vh-3.5rem)] flex-col items-center justify-center p-24">
-      <div className="w-full max-w-md">
+    <main className="flex h-[calc(100vh-3.5rem)] flex-col p-4">
+      <div className="mx-auto flex h-full w-full max-w-md flex-col">
         <input
           className="mb-4 w-full rounded border p-2"
           onChange={(e) => setUserName(e.target.value)}
@@ -27,7 +27,7 @@ export default function Home() {
           type="text"
           value={userName}
         />
-        <div className="mb-4">
+        <div className="mb-4 flex-1 overflow-y-auto">
           {messages
             ?.sort((a, b) => a._creationTime - b._creationTime)
             .map(({ _id, userName: msgUserName, text: msgText }) => (
