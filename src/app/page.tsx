@@ -30,9 +30,9 @@ export default function Home() {
         <div className="mb-4">
           {messages
             ?.sort((a, b) => a._creationTime - b._creationTime)
-            .map(({ _id, userName, text }) => (
+            .map(({ _id, userName: msgUserName, text: msgText }) => (
               <div className="mb-2" key={_id}>
-                <strong>{userName}:</strong> {text}
+                <strong>{msgUserName}:</strong> {msgText}
               </div>
             ))}
         </div>

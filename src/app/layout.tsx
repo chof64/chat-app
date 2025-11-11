@@ -3,7 +3,7 @@ import "~/styles/globals.css";
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import Link from "next/link";
-import { ConvexProvider } from "./ConvexProvider";
+import { ConvexProvider } from "./convex-provider";
 
 export const metadata: Metadata = {
   title: "Chat App - A proof of concept using Convex and Next.js",
