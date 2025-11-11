@@ -1,6 +1,6 @@
 import "~/styles/globals.css";
 
-import { type Metadata } from "next";
+import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { ConvexProvider } from "./ConvexProvider";
 
@@ -19,7 +19,7 @@ export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
-		<html lang="en" className={`${geist.variable}`}>
+		<html className={`${geist.variable}`} lang="en">
 			<body>
 				<ConvexProvider>{children}</ConvexProvider>
 			</body>
