@@ -5,8 +5,8 @@ import { useState } from "react";
 import { api } from "~/convex/_generated/api";
 
 export default function Home() {
-	const messages = useQuery(api.tasks.get);
-	const addMessage = useMutation(api.tasks.add);
+	const messages = useQuery(api.message.get);
+	const addMessage = useMutation(api.message.add);
 	const [userName, setUserName] = useState("");
 	const [text, setText] = useState("");
 
