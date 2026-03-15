@@ -8,6 +8,10 @@ import { ConvexProvider } from "./convex-provider";
 export const metadata: Metadata = {
   title: "Chat App - A proof of concept using Convex and Next.js",
   description: "A simple chat application built with Convex and Next.js.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
 };
 
 const geist = Geist({
